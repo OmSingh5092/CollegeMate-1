@@ -3,10 +3,12 @@ package com.antailbaxt3r.collegemate.retrofit;
 import com.antailbaxt3r.collegemate.models.AssignmentDeleteResponseModel;
 import com.antailbaxt3r.collegemate.models.AssignmentPostResponseModel;
 import com.antailbaxt3r.collegemate.models.AssignmentResponseModel;
+import com.antailbaxt3r.collegemate.models.Attendance;
+import com.antailbaxt3r.collegemate.models.AttendanceGetResponseModel;
+import com.antailbaxt3r.collegemate.models.AttendancePostResponseModel;
 import com.antailbaxt3r.collegemate.models.ClassesGetResponseModel;
 import com.antailbaxt3r.collegemate.models.ClassesPostResponseModel;
 import com.antailbaxt3r.collegemate.models.ImageUploadResponseModel;
-import com.antailbaxt3r.collegemate.models.Library;
 import com.antailbaxt3r.collegemate.models.LibraryDeleteResponseModel;
 import com.antailbaxt3r.collegemate.models.LibraryGetResponseModel;
 import com.antailbaxt3r.collegemate.models.LibraryPostResponseModel;
@@ -80,6 +82,11 @@ public interface APIInterface {
     Call<LibraryGetResponseModel> getLibrary(@Header("token") String token);
     @HTTP(method = "DELETE", path = "timetable/delete", hasBody = true)
     Call<LibraryDeleteResponseModel> deleteLibrary(@Header("token") String token, @Body Map<String,Integer> body);
+
+    @GET("attendance/get")
+    Call<AttendanceGetResponseModel> getAttendance(@Header("token")String token);
+    @POST("attendance/add")
+    Call<AttendancePostResponseModel> addAttendance(@Header("token") String token,@Body Map<String,String> body);
 
 
 

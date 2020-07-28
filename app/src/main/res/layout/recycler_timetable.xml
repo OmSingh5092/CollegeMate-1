@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="@drawable/assignmnet_card"
+    android:background="@drawable/card"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:orientation="vertical">

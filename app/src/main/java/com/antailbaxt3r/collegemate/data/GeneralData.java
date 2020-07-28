@@ -1,6 +1,7 @@
 package com.antailbaxt3r.collegemate.data;
 
 import com.antailbaxt3r.collegemate.models.Assignment;
+import com.antailbaxt3r.collegemate.models.Attendance;
 import com.antailbaxt3r.collegemate.models.Classes;
 import com.antailbaxt3r.collegemate.models.Library;
 import com.antailbaxt3r.collegemate.models.Subject;
@@ -14,7 +15,24 @@ public class GeneralData {
     public static List<Assignment> assignments = new ArrayList<>();
     public static List<Classes> classes = new ArrayList<>();
     public static List<Library> libraries = new ArrayList<>();
-    
+    public static List<Attendance> attendances = new ArrayList<>();
+
+    public static List<Library> getLibraries() {
+        return libraries;
+    }
+
+    public static void setLibraries(List<Library> libraries) {
+        GeneralData.libraries = libraries;
+    }
+
+    public static List<Attendance> getAttendances() {
+        return attendances;
+    }
+
+    public static void setAttendances(List<Attendance> attendances) {
+        GeneralData.attendances = attendances;
+    }
+
     public static List<Subject> getSubjects(){
         return subjects;
     }

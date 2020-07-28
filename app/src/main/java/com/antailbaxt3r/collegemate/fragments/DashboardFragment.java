@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.antailbaxt3r.collegemate.activities.AssignmentActivity;
+import com.antailbaxt3r.collegemate.activities.AttendanceActivity;
 import com.antailbaxt3r.collegemate.activities.LibraryActivity;
 import com.antailbaxt3r.collegemate.activities.SubjectsActivity;
 import com.antailbaxt3r.collegemate.adapters.AssignmentDashboardRecyclerAdapter;
@@ -25,6 +26,7 @@ import com.antailbaxt3r.collegemate.data.GeneralData;
 import com.antailbaxt3r.collegemate.databinding.FragmentDashboardBinding;
 import com.antailbaxt3r.collegemate.models.Assignment;
 import com.antailbaxt3r.collegemate.models.AssignmentResponseModel;
+import com.antailbaxt3r.collegemate.models.Attendance;
 import com.antailbaxt3r.collegemate.models.Subject;
 import com.antailbaxt3r.collegemate.models.SubjectGetResponseModel;
 import com.antailbaxt3r.collegemate.retrofit.RetrofitClient;
@@ -73,6 +75,14 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), LibraryActivity.class);
+                startActivity(i);
+            }
+        });
+
+        dashboardBinding.attendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), AttendanceActivity.class);
                 startActivity(i);
             }
         });
